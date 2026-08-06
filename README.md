@@ -42,3 +42,34 @@ Status
 This repository currently contains the project design documents.
 
 Implementation will begin after the system architecture and data model are finalized.
+
+## Information Access Model
+
+This project distinguishes between public legal information and internal advocacy knowledge.
+
+### Public Layer
+
+Includes publicly available information:
+
+- Laws
+- Enforcement Decrees
+- Enforcement Rules
+- International conventions
+- General Comments
+- Public court decisions
+- Public policy documents
+
+### Restricted Layer
+
+Includes organization-specific knowledge:
+
+- Advocacy strategies
+- Internal legal analysis
+- Negotiation materials
+- Campaign planning documents
+- Unpublished policy proposals
+- Field experience notes
+
+Access to restricted information must be controlled separately.
+
+The platform is designed to preserve collective knowledge while protecting strategic information.
