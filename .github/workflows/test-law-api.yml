@@ -28,3 +28,8 @@ jobs:
         env:
           LAW_API_OC: ${{ secrets.LAW_API_OC }}
         run: python backend/test_law_detail.py
+        
+      - name: Parse Law
+        env:
+          LAW_API_OC: ${{ secrets.LAW_API_OC }}
+        run: python backend/parse_law.py
