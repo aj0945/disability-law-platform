@@ -1,22 +1,25 @@
 name: Test Law API
 
 on:
-workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-test-law-api:
-runs-on: ubuntu-latest
+  test-law-api:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
-  - name: Set up Python
-    uses: actions/setup-python@v5
-    with:
-      python-version: "3.12"
-  - name: Install dependencies
-    run: pip install requests
-  - name: Run Law API test
-    env:
-      LAW_API_OC: ${{ secrets.LAW_API_OC }}
-    run: python backend/test_law_api.py
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Law API test
+        env:
+          LAW_API_OC: ${{ secrets.LAW_API_OC }}
+        run: python backend/test_law_api.py
